@@ -1,0 +1,13 @@
+Traka @PROJECT_VERSION@
+Copyright (C) 2026 hsduren and Traka contributors
+
+Corresponding source: https://github.com/hsduren/Traka
+Version @PROJECT_VERSION@: https://github.com/hsduren/Traka/tree/v@PROJECT_VERSION@
+Complete source archive with pinned dependencies: https://github.com/hsduren/Traka/releases/tag/v@PROJECT_VERSION@
+
+Application code: AGPL-3.0-or-later (see AGPL-3.0.txt).
+Tracktion Engine: GPL-3.0-or-later (see GPL-3.0.txt and upstream notices).
+JUCE: AGPLv3 open-source license path (see AGPL-3.0.txt and upstream notices).
+
+This is free software; you may copy, modify and redistribute it under the applicable licenses.
+This program is distributed without any warranty. See the included licenses for details.

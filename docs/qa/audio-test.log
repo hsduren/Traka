@@ -1,0 +1,31 @@
+JUCE v8.0.13
+Settings file: /Users/uvm/Library/Traka/Settings.xml
+Audio block size: 512  Rate: 48000.000000
+Creating Default Controllers...
+Edit loaded in: 2 ms
+Traka audio workflow test
+PASS app bundles full AGPL license
+PASS app bundles source URL for its exact version
+Edit loaded in: 1 ms
+PASS create independently generated demo audio
+PASS three audio tracks plus empty recording track
+PASS unavailable recording input rejected
+PASS move clip
+PASS undo movement
+PASS redo movement
+PASS non-destructive trim preserves source offset
+PASS split clip
+PASS save project with copied audio
+Edit loaded in: 2 ms
+PASS reopen project
+PASS persist edits, mute and volume
+Edit loaded in: 2 ms
+PASS portable relative media references
+PASS invalid project does not replace session
+PASS render mixed WAV
+PASS 48 kHz / 24-bit / stereo format
+PASS mix contains audible samples
+PASS correct export duration
+PASS muted tracks excluded from export
+Failures: 0
+Cleaning up temp files..

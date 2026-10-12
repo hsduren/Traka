@@ -1,0 +1,7 @@
+/build/
+.DS_Store
+*.traka
+*.traka.media/
+
+/release/
+/build-xcode/
