@@ -11,11 +11,30 @@ class LicenseView : public Component {
 public:
     TextEditor document;
     HyperlinkButton source;
-    LicenseView(const String& info, const String& sourceLabel) : source(sourceLabel, URL(TRAKA_SOURCE_URL)) {
-        document.setMultiLine(true);document.setReadOnly(true);document.setScrollbarsShown(true);document.setText(info.replace("\f","\n"),false);
-        addAndMakeVisible(document);addAndMakeVisible(source);setSize(740,560);
+    TextButton previous {"<"}, next {">"};
+    Label pageLabel;
+    String fullText;
+    int page=0;
+    static constexpr int pageSize=6000;
+    LicenseView(const String& info, const String& sourceLabel) : source(sourceLabel, URL(TRAKA_SOURCE_URL)), fullText(info.replace("\f","\n")) {
+        document.setMultiLine(true);document.setReadOnly(true);document.setScrollbarsShown(true);
+        addAndMakeVisible(document);addAndMakeVisible(source);addAndMakeVisible(previous);addAndMakeVisible(next);addAndMakeVisible(pageLabel);
+        previous.onClick=[this]{--page;showPage();};next.onClick=[this]{++page;showPage();};
+        previous.setTitle("Previous license page");next.setTitle("Next license page");
+        pageLabel.setJustificationType(Justification::centred);showPage();setSize(740,560);
     }
-    void resized() override {source.setBounds(12,8,getWidth()-24,30);document.setBounds(12,46,getWidth()-24,getHeight()-58);}
+    void showPage() {
+        auto total=jmax(1,(fullText.length()+pageSize-1)/pageSize);
+        page=jlimit(0,total-1,page);
+        document.setText(fullText.substring(page*pageSize,(page+1)*pageSize),false);
+        document.moveCaretToTop(false);
+        previous.setEnabled(page>0);next.setEnabled(page<total-1);
+        pageLabel.setText(String(page+1)+" / "+String(total),dontSendNotification);
+    }
+    void resized() override {
+        source.setBounds(12,8,getWidth()-24,30);document.setBounds(12,46,getWidth()-24,getHeight()-98);
+        previous.setBounds(getWidth()/2-92,getHeight()-42,36,28);pageLabel.setBounds(getWidth()/2-48,getHeight()-42,96,28);next.setBounds(getWidth()/2+56,getHeight()-42,36,28);
+    }
 };
 String timeString(double s) { return String::formatted("%02d:%02d.%02d", (int)s/60, (int)s%60, (int)(s*100)%100); }
 }

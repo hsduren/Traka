@@ -19,3 +19,7 @@ For a new version:
 ## v0.1.0 — 2026-10-12
 
 First P0 source release: audio import, multitrack playback, single-track recording implementation, basic move/trim/split/delete with undo/redo, track volume/pan/mute/solo, local project persistence with copied media, stereo 48 kHz / 24-bit WAV export, English/Simplified Chinese UI and bundled open-source notices. The recording implementation has not been tested against a real microphone; the VM has no input channels.
+
+## v0.1.1 — 2026-10-18
+
+Adds the user-approved front-facing silver mixing-console app icon, integrated as an Icon Composer `.icon` source and compiled into `Assets.car` plus `AppIcon.icns`. Requires Xcode 26+ to build. User authorized host-side launch and icon checks for this update. Application audio behavior is unchanged. License display now paginates the full text to avoid long layout stalls discovered during host validation.

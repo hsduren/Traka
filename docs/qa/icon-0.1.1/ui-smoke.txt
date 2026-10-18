@@ -1,0 +1,14 @@
+Traka VM UI workflow
+PASS demo has three clips and recording track
+PASS timeline move uses audio model
+PASS split action
+PASS volume control
+PASS transport advances in guest
+PASS stop action
+PASS save project
+PASS reopen project
+PASS live language switch
+PASS asynchronous export finishes
+PASS WAV export format
+PASS export contains audio
+PASS license dialog contains source URL and full license text

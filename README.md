@@ -1,12 +1,12 @@
 # Traka — P0
 
-[公开源码](https://github.com/hsduren/Traka) · [v0.1.0 源码发布](https://github.com/hsduren/Traka/releases/tag/v0.1.0)
+[公开源码](https://github.com/hsduren/Traka) · [v0.1.1 源码发布](https://github.com/hsduren/Traka/releases/tag/v0.1.1)
 
 一个基于 JUCE + Tracktion Engine 的本地 macOS 音频工作站。首版只验证：**导入 → 播放 / 录音 → 简单剪辑与混音 → 保存 → 导出**。
 
 ## 构建与运行
 
-需要 macOS 13+、Xcode Command Line Tools、CMake、Ninja。可以先安装 `brew install cmake ninja`。当前已在 Apple Silicon 开发；Intel 与 universal 构建尚未验证。
+需要 macOS 13+、Xcode 26 或更新版本（图标编译需要 actool）、CMake、Ninja。可以先安装 `brew install cmake ninja`。当前已在 Apple Silicon 开发；Intel 与 universal 构建尚未验证。
 
 ```sh
 git clone https://github.com/hsduren/Traka.git
@@ -18,7 +18,7 @@ git -C vendor/tracktion_engine submodule update --init --depth 1
 ./scripts/test-vm.sh macos2
 ```
 
-**本项目验收只在 macOS 2 VM 运行，不在主机启动应用或做 UI 测试。**测试脚本将构建复制到 VM 的 `~/Applications/Traka-P0-QA/Traka.app`，报告和截图保存到本项目 `docs/qa`。
+**默认验收在 macOS 2 VM；用户已明确授权本次 0.1.1 图标更新在主机运行和测试。**测试脚本将构建复制到 VM 的 `~/Applications/Traka-P0-QA/Traka.app`，报告和截图保存到本项目 `docs/qa`。
 
 自测 VM 需要先配置可 SSH 连接的主机别名；`macos2` 是维护者使用的别名，可替换为自己的测试 VM。普通用户可在自己的 Mac 构建并手动运行 `build/Traka_artefacts/Debug/Traka.app`。
 
