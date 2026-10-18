@@ -1,6 +1,6 @@
 # Traka — P0
 
-[公开源码](https://github.com/hsduren/Traka) · [v0.1.1 源码发布](https://github.com/hsduren/Traka/releases/tag/v0.1.1)
+[公开源码](https://github.com/hsduren/Traka) · [v0.1.2 源码发布](https://github.com/hsduren/Traka/releases/tag/v0.1.2)
 
 一个基于 JUCE + Tracktion Engine 的本地 macOS 音频工作站。首版只验证：**导入 → 播放 / 录音 → 简单剪辑与混音 → 保存 → 导出**。
 

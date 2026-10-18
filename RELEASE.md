@@ -23,3 +23,7 @@ First P0 source release: audio import, multitrack playback, single-track recordi
 ## v0.1.1 — 2026-10-18
 
 Adds the user-approved front-facing silver mixing-console app icon, integrated as an Icon Composer `.icon` source and compiled into `Assets.car` plus `AppIcon.icns`. Requires Xcode 26+ to build. User authorized host-side launch and icon checks for this update. Application audio behavior is unchanged. License display now paginates the full text to avoid long layout stalls discovered during host validation.
+
+## v0.1.2 — 2026-10-18
+
+Replaces the detailed console icon with the user-approved simplified Dock preview: three thick charcoal tracks, smooth oversized caps, one orange center cap and two off-white caps on a full-bleed light panel. Removes metal grain, grip grooves, fine divider lines and glow to improve small-size legibility. Uses the same Icon Composer and ICNS integration; application behavior is unchanged.

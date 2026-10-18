@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 if(NOT CMAKE_OSX_DEPLOYMENT_TARGET)
     set(CMAKE_OSX_DEPLOYMENT_TARGET "13.0" CACHE STRING "Minimum macOS" FORCE)
 endif()
-project(Traka VERSION 0.1.1 LANGUAGES C CXX)
+project(Traka VERSION 0.1.2 LANGUAGES C CXX)
 set(TE_ADD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(vendor/tracktion_engine)
 juce_add_gui_app(Traka PRODUCT_NAME "Traka" BUNDLE_ID "com.yxf.traka"

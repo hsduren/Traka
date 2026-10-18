@@ -1,6 +1,6 @@
 # Traka app icon
 
-Original front-facing silver mixing-console artwork generated for Traka using the built-in image-generation tool. The configured GetToken models `gpt-image-2.5-sunburst` and `gpt-image-2` returned HTTP 503 (no available account), so generation used the built-in provider. No upstream branding or artwork is reused.
+Original simplified front-facing mixing-console artwork generated for Traka using the built-in image-generation tool. The configured GetToken models `gpt-image-2.5-sunburst` and `gpt-image-2` returned HTTP 503 (no available account), so generation used the built-in provider. No upstream branding or artwork is reused.
 
 - `traka-generated.png`: original 1254×1254 output, retained unchanged.
 - `traka-master.png`: 1024×1024 RGB production master, converted/resampled for packaging.
@@ -10,4 +10,4 @@ Original front-facing silver mixing-console artwork generated for Traka using th
 
 The CMake target includes the `.icon` source in its Resources. `scripts/compile_icon.py` compiles it with Xcode actool and merges `CFBundleIconName` / `CFBundleIconFile`. It emits `AppIcon.icns` for older systems and `Assets.car` for modern macOS rendering. The source artwork is included with Traka's open-source assets under the project's AGPL-3.0-or-later license; no claim of exclusive rights in AI output is made.
 
-The user selected the front-facing full-bleed console on 2026-10-18. All three tracks are vertical and parallel; there is no perspective tilt, large black background or pre-baked rounded icon container. Only this selected artwork is included.
+The user selected the simplified console on 2026-10-18 after viewing it in the Dock. The full-bleed light background holds three thick charcoal tracks and three smooth caps (white, orange, white). The metal grain, grip grooves, deep recesses, divider lines and glowing strips of 0.1.1 have been removed. All tracks are front-facing and parallel; only this selected artwork is included.
