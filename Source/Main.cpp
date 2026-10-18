@@ -2,6 +2,7 @@
 // Copyright (C) 2026 hsduren and Traka contributors
 #include "Studio.h"
 void trakaRefreshDockIcon();
+void trakaApplyDarkAppearance();
 class TrakaApp : public JUCEApplication {
 public:
     const String getApplicationName() override {return "Traka";}
@@ -9,6 +10,7 @@ public:
     bool moreThanOneInstanceAllowed() override {return true;}
     void initialise(const String& args) override {
         if(args.contains("--self-test")){setApplicationReturnValue(runSelfTest());quit();return;}
+        trakaApplyDarkAppearance();
         window=std::make_unique<Window>();
         trakaRefreshDockIcon();
         Timer::callAfterDelay(500, [] { trakaRefreshDockIcon(); });

@@ -2,6 +2,13 @@
 // Copyright (C) 2026 hsduren and Traka contributors
 #import <AppKit/AppKit.h>
 
+void trakaApplyDarkAppearance()
+{
+    // The studio uses a dark palette regardless of the system appearance.
+    // Let native window chrome and panels follow that same appearance.
+    [NSApp setAppearance:[NSAppearance appearanceNamed:NSAppearanceNameDarkAqua]];
+}
+
 void trakaRefreshDockIcon()
 {
     // Read the current bundle bytes directly: Launch Services may retain an older

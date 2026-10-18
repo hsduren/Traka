@@ -1,6 +1,7 @@
 # Traka P0 产品约定
 
 - 最终产品名 Traka，Bundle ID `com.yxf.traka`，当前版本 0.1.2。
+- 工作区固定深色；原生标题栏及面板使用应用级 Dark Aqua 外观，与主体保持一致，不修改系统外观偏好。
 - 原生桌面应用，C++20 / JUCE / Tracktion Engine，最低 macOS 13。
 - 核心闭环：音频导入、多轨播放、单轨录音、基础剪辑/混音、项目保存重开、WAV 导出。
 - 项目为 `.traka` XML 与同名 `.traka.media` 文件夹，音频使用相对路径；原始导入文件不被修改。
