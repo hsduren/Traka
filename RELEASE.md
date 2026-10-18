@@ -26,4 +26,4 @@ Adds the user-approved front-facing silver mixing-console app icon, integrated a
 
 ## v0.1.2 — 2026-10-18
 
-Replaces the detailed console icon with the user-approved simplified Dock preview: three thick charcoal tracks, smooth oversized caps, one orange center cap and two off-white caps on a full-bleed light panel. Removes metal grain, grip grooves, fine divider lines and glow to improve small-size legibility. Uses the same Icon Composer and ICNS integration; application behavior is unchanged.
+Replaces the detailed console icon with the user-approved simplified Dock preview: three thick charcoal tracks, smooth oversized caps, one orange center cap and two off-white caps on a full-bleed light panel. Removes metal grain, grip grooves, fine divider lines and glow to improve small-size legibility. Uses the same Icon Composer and ICNS integration. On launch, the app explicitly loads its compiled icon into its own Dock tile to avoid stale Launch Services artwork at the same bundle path. Audio behavior is unchanged.

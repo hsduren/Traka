@@ -11,3 +11,5 @@
 - 已通过 CUA 保存退出旧正式版、关闭临时图标预览 App，然后启动正式 Traka；主窗口正常显示。
 
 临时预览应用仅位于忽略的 output/ 目录，不进入源码发布。此更新只更换图标；不增加权限或网络能力。没有重新测试旧版 macOS 或实体麦克风硬件。
+
+更新：用户反馈正式 Dock 仍显示旧图标。已增加 Source/DockIcon.mm，在启动和启动后 500ms 直接读取当前 AppIcon.icns 设置 NSApplication.applicationIconImage 并刷新自身 Dock tile，不重启系统 Dock、不改全局偏好。已正常退出旧进程、刷新当前应用注册并启动新进程。此修复属于尚未发布的 0.1.2。

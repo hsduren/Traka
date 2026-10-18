@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 if(NOT CMAKE_OSX_DEPLOYMENT_TARGET)
     set(CMAKE_OSX_DEPLOYMENT_TARGET "13.0" CACHE STRING "Minimum macOS" FORCE)
 endif()
-project(Traka VERSION 0.1.2 LANGUAGES C CXX)
+project(Traka VERSION 0.1.2 LANGUAGES C CXX OBJCXX)
 set(TE_ADD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(vendor/tracktion_engine)
 juce_add_gui_app(Traka PRODUCT_NAME "Traka" BUNDLE_ID "com.yxf.traka"
@@ -14,7 +14,7 @@ juce_add_gui_app(Traka PRODUCT_NAME "Traka" BUNDLE_ID "com.yxf.traka"
 juce_generate_juce_header(Traka)
 set_source_files_properties(Resources/AppIcon.icon PROPERTIES
     MACOSX_PACKAGE_LOCATION Resources XCODE_EXPLICIT_FILE_TYPE folder.iconcomposer.icon)
-target_sources(Traka PRIVATE Resources/AppIcon.icon Source/Main.cpp Source/Session.cpp Source/Studio.cpp Source/SelfTest.cpp Source/UISmoke.cpp)
+target_sources(Traka PRIVATE Resources/AppIcon.icon Source/Main.cpp Source/DockIcon.mm Source/Session.cpp Source/Studio.cpp Source/SelfTest.cpp Source/UISmoke.cpp)
 set_target_properties(Traka PROPERTIES XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME AppIcon)
 set_property(TARGET Traka APPEND PROPERTY LINK_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/Resources/AppIcon.icon/icon.json"

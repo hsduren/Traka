@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 hsduren and Traka contributors
 #include "Studio.h"
+void trakaRefreshDockIcon();
 class TrakaApp : public JUCEApplication {
 public:
     const String getApplicationName() override {return "Traka";}
@@ -9,6 +10,8 @@ public:
     void initialise(const String& args) override {
         if(args.contains("--self-test")){setApplicationReturnValue(runSelfTest());quit();return;}
         window=std::make_unique<Window>();
+        trakaRefreshDockIcon();
+        Timer::callAfterDelay(500, [] { trakaRefreshDockIcon(); });
         if(args.contains("--ui-smoke")) {
             auto output=File::getSpecialLocation(File::userDocumentsDirectory).getChildFile("Traka-P0-QA");
             auto studio=dynamic_cast<Studio*>(window->getContentComponent());
